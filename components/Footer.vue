@@ -68,6 +68,10 @@ li {
   font-weight: 100;
 }
 
+.router-link-exact-active {
+  text-decoration: underline;
+}
+
 @media (min-width: 768px) {
   footer {
     flex-direction: row;

@@ -1,32 +1,30 @@
 <template>
   <div>
-    <h1>Home Page</h1>
-    <ul>
-      <li v-for="item in store.cart" :key="item.id">{{ item.title }}</li>
-    </ul>
-    <p>{{ store.cartTotal }}</p>
-    <div v-if="store.isLoading">Loading...</div>
-    <div v-else class="wrapper">
+    <h1>pinia page</h1>
+    <p>There are {{ store.prodLength }} items</p>
+    <NewProductForm />
+    <p v-if="store.isLoading">loading store</p>
+    <ul v-else>
       <Product
         v-for="product in store.products"
         :key="product.id"
         :product="product"
       />
-    </div>
+    </ul>
   </div>
 </template>
 
 <script setup>
 const store = useProductsStore();
-store.getProducts();
+await store.getProducts();
 </script>
 
 <style lang="scss" scoped>
-h1 {
+div {
   text-align: center;
 }
 
-.wrapper {
+ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;

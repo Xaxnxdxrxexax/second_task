@@ -2,11 +2,13 @@
   <header class="header">
     <div class="wrapper">
       <div>
-        <img
-          src="../assets/logo/GroupglassPaperLogo.png"
-          alt="glassPaper logo"
-          class="logo"
-        />
+        <NuxtLink to="/">
+          <img
+            src="../assets/logo/GroupglassPaperLogo.png"
+            alt="glassPaper logo"
+            class="logo"
+          />
+        </NuxtLink>
       </div>
       <button
         :class="!isOpen ? 'burger-active' : 'burger-inactive'"
@@ -34,6 +36,9 @@ const isOpen = ref(false);
 </script>
 
 <style lang="scss" scoped>
+.router-link-exact-active {
+  text-decoration: underline;
+}
 .logo {
   cursor: pointer;
 }

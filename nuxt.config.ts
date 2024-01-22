@@ -2,14 +2,17 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/styles/main.scss"],
-  modules: [[
-    "@nuxtjs/google-fonts",
-    {
-      families: {
-        Roboto: true,
+  modules: [
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: {
+          Roboto: true,
+        },
       },
-    },
-  ], "@pinia/nuxt"],
+    ],
+    "@pinia/nuxt",
+  ],
   vite: {
     css: {
       preprocessorOptions: {
@@ -17,6 +20,17 @@ export default defineNuxtConfig({
           additionalData: '@use "~/assets/styles/_colors.scss" as *;',
         },
       },
+    },
+  },
+  app: {
+    head: {
+      title: "GlassPaper Marketplace",
+      meta: [
+        {
+          name: "description",
+          content: "Everything you can buy from the best brands in the world!",
+        },
+      ],
     },
   },
 });
