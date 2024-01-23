@@ -17,6 +17,7 @@ const { params } = useRoute();
 useHead({
   title: `GlassPaper - ${params.cathegory}`,
 });
+
 const { data: products, pending: loading } = await useFetch(
   `https://fakestoreapi.com/products/category/${encodeURIComponent(
     params.cathegory

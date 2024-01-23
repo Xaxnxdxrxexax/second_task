@@ -17,7 +17,7 @@ export const useProductsStore = defineStore("products", {
   actions: {
     async getProducts() {
       this.isLoading = true;
-      const res = await fetch("https://fakestoreapi.com/products");
+      const res = await fetch("https://fakestoreapi.com/products?sort=desc");
       const data = await res.json();
       this.products = data;
       this.isLoading = false;

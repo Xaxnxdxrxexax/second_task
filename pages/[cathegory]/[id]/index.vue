@@ -22,7 +22,6 @@
 
 <script setup>
 const { params } = useRoute();
-
 const { data: product, pending: loading } = await useFetch(
   `https://fakestoreapi.com/products/${params.id}`
 );

@@ -13,7 +13,7 @@
 
 <script setup>
 const store = useProductsStore();
-store.getProducts();
+onMounted(() => store.getProducts());
 </script>
 
 <style lang="scss" scoped>

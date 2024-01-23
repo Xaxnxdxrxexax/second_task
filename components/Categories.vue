@@ -37,7 +37,7 @@ const { data: categories, pending: isLoading } = await useFetch(
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    justify-content: stretch;
     gap: 1rem;
     width: max-content;
     li {
@@ -56,6 +56,7 @@ const { data: categories, pending: isLoading } = await useFetch(
         padding: 1rem;
         display: inline-block;
         color: white;
+        text-transform: capitalize;
       }
       .router-link-exact-active {
         text-decoration: underline;
