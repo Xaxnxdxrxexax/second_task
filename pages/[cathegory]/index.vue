@@ -1,7 +1,6 @@
 <template>
   <div>
-    <h2>cathegory page</h2>
-    <p>Cathegory: {{ params.cathegory }}</p>
+    <h2>Cathegory: {{ params.cathegory }}</h2>
     <div v-if="loading">Loading...</div>
     <div v-else class="wrapper">
       <Product
@@ -36,7 +35,13 @@ if (products.value.length === 0) {
 <style lang="scss" scoped>
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 1rem;
 }
 </style>

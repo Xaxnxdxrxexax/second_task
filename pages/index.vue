@@ -1,10 +1,5 @@
 <template>
-  <div>
-    <h1>Home Page</h1>
-    <ul>
-      <li v-for="item in store.cart" :key="item.id">{{ item.title }}</li>
-    </ul>
-    <p>{{ store.cartTotal }}</p>
+  <div class="home">
     <div v-if="store.isLoading">Loading...</div>
     <div v-else class="wrapper">
       <Product
@@ -22,13 +17,13 @@ store.getProducts();
 </script>
 
 <style lang="scss" scoped>
-h1 {
-  text-align: center;
+.home {
+  padding-block: 2rem;
 }
-
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  align-items: baseline;
 }
 </style>

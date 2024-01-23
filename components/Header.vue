@@ -10,23 +10,6 @@
           />
         </NuxtLink>
       </div>
-      <button
-        :class="!isOpen ? 'burger-active' : 'burger-inactive'"
-        class="burger"
-        @click="isOpen = !isOpen"
-      >
-        <span class="sr-only">Menu</span>
-      </button>
-      <div :class="{ hidden: !isOpen }" class="nav-background"></div>
-      <nav :class="{ 'hidden-nav': !isOpen }">
-        <p><span class="lang">EN</span> | <span class="lang">NO</span></p>
-        <ul class="nav-list">
-          <li>Tjenester</li>
-          <li>Om oss</li>
-          <li>Kontakt oss</li>
-          <li>Ledige stillinger</li>
-        </ul>
-      </nav>
     </div>
   </header>
 </template>
@@ -37,7 +20,7 @@ const isOpen = ref(false);
 
 <style lang="scss" scoped>
 .router-link-exact-active {
-  text-decoration: underline;
+  color: $easternBlue;
 }
 .logo {
   cursor: pointer;
@@ -45,7 +28,7 @@ const isOpen = ref(false);
 .wrapper {
   display: flex;
   padding-inline: 19.53%;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 140px;
 }

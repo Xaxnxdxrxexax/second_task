@@ -11,7 +11,7 @@ export const useProductsStore = defineStore("products", {
       return this.products.length;
     },
     cartTotal(): number {
-      return this.cart.reduce((c, p) => c + p.price, 0);
+      return +this.cart.reduce((c, p) => c + p.price, 0).toFixed(2);
     },
   },
   actions: {
