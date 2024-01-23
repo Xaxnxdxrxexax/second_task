@@ -17,7 +17,10 @@
         <p>{{ item.price }}$</p>
       </li>
       <hr />
-      <li class="total">{{ store.cartTotal }}$</li>
+      <li>
+        <button @click="store.emptyCart">Empty Cart</button>
+        <p class="total">{{ store.cartTotal }}$</p>
+      </li>
     </ul>
   </div>
 </template>
@@ -87,5 +90,19 @@ a {
 .router-link-exact-active {
   text-decoration: underline;
   color: $black;
+}
+
+button {
+  background: none;
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  color: $elephant;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
 }
 </style>

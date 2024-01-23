@@ -79,5 +79,10 @@ export const useProductsStore = defineStore("products", {
     removeFromCart(id: number) {
       this.cart = this.cart.filter((product) => product.id !== id);
     },
+    emptyCart() {
+      if (window.confirm("Are you sure you want to clear the cart?")) {
+        this.cart = [];
+      }
+    },
   },
 });
