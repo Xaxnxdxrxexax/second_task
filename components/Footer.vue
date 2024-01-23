@@ -24,8 +24,14 @@
 .container {
   background-color: $elephant;
   color: white;
+  width: 100%;
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 4fr 1fr;
+  margin-inline: auto;
 }
 footer {
+  max-width: 1920px;
   display: flex;
   margin-inline: auto;
   width: max-content;

@@ -9,9 +9,6 @@
       <p class="price">{{ product.price }}$</p>
       <p class="description">{{ product.description }}</p>
       <div class="buttons">
-        <button @click="store.deleteProduct(product.id)" class="delete">
-          delete
-        </button>
         <button v-if="isInCart(product.id)" @click="store.addToCart(product)">
           Add to Cart
         </button>
@@ -78,7 +75,6 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 1rem;
   padding-block: 0.5rem;
 }
 button {

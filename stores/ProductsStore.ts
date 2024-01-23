@@ -1,5 +1,5 @@
 import type { Product } from "~/server/api/products";
-
+// TODO: is there a better way to do this?
 export const useProductsStore = defineStore("products", {
   state: () => ({
     isLoading: false,
@@ -61,14 +61,16 @@ export const useProductsStore = defineStore("products", {
       }
     },
     async deleteProduct(id: number) {
-      this.products = this.products.filter((product) => product.id !== id);
-      this.cart = this.cart.filter((product) => product.id !== id);
-      try {
-        const res = await fetch("https://fakestoreapi.com/products/" + id, {
-          method: "DELETE",
-        });
-      } catch (error) {
-        console.log(error);
+      if (window.confirm("Are you sure you want to delete this product?")) {
+        this.products = this.products.filter((product) => product.id !== id);
+        this.cart = this.cart.filter((product) => product.id !== id);
+        try {
+          const res = await fetch("https://fakestoreapi.com/products/" + id, {
+            method: "DELETE",
+          });
+        } catch (error) {
+          console.log(error);
+        }
       }
     },
     addToCart(product: Product) {

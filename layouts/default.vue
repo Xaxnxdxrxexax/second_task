@@ -1,6 +1,7 @@
 <template>
+  <!-- TODO: not good practice to add classes here? -->
   <Header />
-  <div>
+  <div class="wrapper">
     <Categories />
     <slot />
     <Cart />
@@ -9,7 +10,7 @@
 </template>
 
 <style lang="scss" scoped>
-div {
+.wrapper {
   display: grid;
   position: relative;
   grid-template-columns: 1fr 4fr 1fr;

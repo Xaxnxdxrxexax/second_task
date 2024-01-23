@@ -23,6 +23,8 @@ const { data: categories, pending: isLoading } = await useFetch(
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
+  background-color: $turquoise;
+  outline: 1px solid transparent;
 
   h2 {
     font-size: 1.5rem;
@@ -40,7 +42,7 @@ const { data: categories, pending: isLoading } = await useFetch(
     width: max-content;
     li {
       list-style: none;
-      font-size: 1.5rem;
+      font-size: 1rem;
       background-color: $elephant;
       border-radius: 10px;
       cursor: pointer;
@@ -57,7 +59,6 @@ const { data: categories, pending: isLoading } = await useFetch(
       }
       .router-link-exact-active {
         text-decoration: underline;
-        color: $cyan;
       }
     }
   }

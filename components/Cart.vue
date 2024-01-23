@@ -4,6 +4,7 @@
     <p v-if="store.cart.length === 0">No products in the cart :(</p>
     <ul v-else>
       <li v-for="item in store.cart" :key="item.id">
+        <!-- TODO: is there a way to avoid this path check? -->
         <NuxtLink
           :to="
             !params.cathegory ? `/${item.category}/${item.id}` : `/${item.id}`
@@ -30,6 +31,7 @@ const { params } = useRoute();
 h2 {
   font-size: 1.5rem;
   font-weight: 800;
+  color: $elephant;
 }
 .cart-wrapper {
   display: flex;
@@ -39,6 +41,8 @@ h2 {
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
+  background-color: $turquoise;
+  outline: 1px solid transparent;
 }
 ul {
   position: sticky;

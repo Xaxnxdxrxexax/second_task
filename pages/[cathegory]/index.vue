@@ -22,7 +22,7 @@ const { data: products, pending: loading } = await useFetch(
     params.cathegory
   )}`
 );
-
+//TODO: better way to handle 404?
 if (products.value.length === 0) {
   throw createError({
     statusCode: 404,

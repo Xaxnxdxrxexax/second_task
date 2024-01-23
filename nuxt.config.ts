@@ -22,6 +22,7 @@ export default defineNuxtConfig({
       },
     },
   },
+  // TODO: general or for every page?
   app: {
     head: {
       title: "GlassPaper Marketplace",

@@ -42,6 +42,7 @@ const isInCart = (id) => !store.cart.find((item) => item.id === id);
 .image-wrapper {
   position: relative;
   cursor: pointer;
+  padding-inline: 1rem;
 
   img {
     height: 180px;
