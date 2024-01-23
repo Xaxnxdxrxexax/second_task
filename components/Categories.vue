@@ -19,6 +19,7 @@ const { data: categories, pending: isLoading } = await useFetch(
 .categories-wrapper {
   position: relative;
   display: flex;
+  width: 100%;
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;

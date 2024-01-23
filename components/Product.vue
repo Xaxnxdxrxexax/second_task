@@ -46,6 +46,7 @@ const isInCart = (id) => !store.cart.find((item) => item.id === id);
   img {
     height: 180px;
     object-fit: contain;
+    mix-blend-mode: multiply;
   }
 
   &:hover {

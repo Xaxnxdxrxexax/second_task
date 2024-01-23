@@ -34,14 +34,15 @@ h2 {
 .cart-wrapper {
   display: flex;
   position: relative;
-  height: fit-content;
+  height: 100%;
+  width: 100%;
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
 }
 ul {
   position: sticky;
-  top: 0;
+  top: 15px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -72,11 +73,15 @@ hr {
 }
 a {
   text-decoration: none;
-  color: $easternBlue;
+  color: $elephant;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .router-link-exact-active {
   text-decoration: underline;
-  color: $cyan;
+  color: $black;
 }
 </style>

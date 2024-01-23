@@ -1,6 +1,7 @@
 <script setup></script>
 <template>
   <div class="container">
+    <div></div>
     <footer>
       <ul class="firstList">
         <li>Glasspaper deler</li>
@@ -15,19 +16,21 @@
         <li>Copyright og Trademark</li>
       </ul>
     </footer>
+    <div></div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .container {
-  background-color: $easternBlue;
-  min-height: 275px;
-  color: $black;
+  background-color: $elephant;
+  color: white;
 }
 footer {
   display: flex;
+  margin-inline: auto;
+  width: max-content;
   flex-direction: column;
-  justify-items: center;
+  justify-content: space-between;
   gap: 2rem;
   align-items: center;
   padding-block: 60px;
@@ -75,8 +78,7 @@ li {
 @media (min-width: 768px) {
   footer {
     flex-direction: row;
-    max-width: 1170px;
-    margin-inline: auto;
+    width: 100%;
   }
 
   .firstList {

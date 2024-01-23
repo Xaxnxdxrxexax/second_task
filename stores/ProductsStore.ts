@@ -46,21 +46,25 @@ export const useProductsStore = defineStore("products", {
         }
       });
       try {
-        const res = await fetch("api/products/" + product.id, {
-          method: "PUT",
-          body: JSON.stringify(product),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        const res = await fetch(
+          "https://fakestoreapi.com/products/" + product.id,
+          {
+            method: "PUT",
+            body: JSON.stringify(product),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
       } catch (error) {
         console.log(error);
       }
     },
     async deleteProduct(id: number) {
       this.products = this.products.filter((product) => product.id !== id);
+      this.cart = this.cart.filter((product) => product.id !== id);
       try {
-        const res = await fetch("api/products/" + id, {
+        const res = await fetch("https://fakestoreapi.com/products/" + id, {
           method: "DELETE",
         });
       } catch (error) {

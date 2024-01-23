@@ -34,7 +34,7 @@ const isOpen = ref(false);
 }
 
 .header {
-  background-color: $elephant;
+  background-color: $easternBlue;
   min-height: 140px;
   color: white;
 }

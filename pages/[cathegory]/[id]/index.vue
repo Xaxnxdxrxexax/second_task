@@ -106,4 +106,8 @@ button {
 .remove {
   background-color: $easternBlue;
 }
+
+img {
+  mix-blend-mode: multiply;
+}
 </style>
